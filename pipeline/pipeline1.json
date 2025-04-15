@@ -88,7 +88,10 @@
 									"referenceName": "indosalaries",
 									"type": "DataFlowReference",
 									"parameters": {
-										"gender": "\"Male\""
+										"gender": {
+											"value": "'@{pipeline().parameters.genderPipe}'",
+											"type": "Expression"
+										}
 									}
 								},
 								"compute": {
@@ -106,6 +109,10 @@
 			"doTransform": {
 				"type": "bool",
 				"defaultValue": true
+			},
+			"genderPipe": {
+				"type": "string",
+				"defaultValue": "\"Male\""
 			}
 		},
 		"annotations": []

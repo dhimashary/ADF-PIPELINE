@@ -1,5 +1,5 @@
 {
-	"name": "sourceUserdata",
+	"name": "sourceUserdataParquet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "stengdwesteu001",

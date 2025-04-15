@@ -47,13 +47,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "userdata",
+						"referenceName": "sourceUserdata",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "userdata2",
+						"referenceName": "destinationUserdata",
 						"type": "DatasetReference"
 					}
 				]

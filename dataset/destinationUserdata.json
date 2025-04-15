@@ -1,5 +1,5 @@
 {
-	"name": "userdata2",
+	"name": "destinationUserdata",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "stengdwesteu001",

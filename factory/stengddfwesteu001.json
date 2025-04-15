@@ -1,0 +1,9 @@
+{
+	"name": "stengddfwesteu001",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0278437b-4a78-4b5c-a7fa-7380aa40c7d7",
+		"tenantId": "cc7df247-60ce-4a0f-9d75-704cf60efc64"
+	}
+}

@@ -40,6 +40,9 @@
 				}
 			],
 			"scriptLines": [
+				"parameters{",
+				"     gender as string (\"Male\")",
+				"}",
 				"source(output(",
 				"          registration_dttm as timestamp,",
 				"          id as integer,",
@@ -78,7 +81,7 @@
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false,",
 				"     format: 'parquet') ~> source2",
-				"join1 filter(and(equals(source1@country, \"Indonesia\"), equals(source1@gender, \"Female\"))) ~> filter1",
+				"join1 filter(and(equals(source1@country, \"Indonesia\"), equals(source1@gender, $gender))) ~> filter1",
 				"filter1 derive(column1 = equals(mod(source1@id, 2), 0)) ~> idEven",
 				"source1, source2 join(source1@first_name == source2@first_name,",
 				"     joinType:'inner',",

@@ -14,6 +14,10 @@
 			],
 			"sinks": [
 				{
+					"dataset": {
+						"referenceName": "srcuserdata1",
+						"type": "DatasetReference"
+					},
 					"name": "sink1"
 				}
 			],
@@ -49,6 +53,22 @@
 				"filter1 derive(column1 = equals(mod(id, 2), 0)) ~> idEven",
 				"idEven sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
+				"     input(",
+				"          registration_dttm as timestamp,",
+				"          id as integer,",
+				"          first_name as string,",
+				"          last_name as string,",
+				"          email as string,",
+				"          gender as string,",
+				"          ip_address as string,",
+				"          cc as string,",
+				"          country as string,",
+				"          birthdate as string,",
+				"          salary as double,",
+				"          title as string,",
+				"          comments as string",
+				"     ),",
+				"     format: 'parquet',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]

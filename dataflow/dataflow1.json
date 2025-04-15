@@ -40,6 +40,9 @@
 				}
 			],
 			"scriptLines": [
+				"parameters{",
+				"     country as string (\"China\")",
+				"}",
 				"source(output(",
 				"          registration_dttm as timestamp,",
 				"          id as integer,",
